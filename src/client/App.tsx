@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import FlashCard from './components/FlashCard';
+import ChoicesBox from './components/ChoicesBox';
 
 class App extends React.Component<IAppProps, IAppState> {
 	constructor(props: IAppProps) {
@@ -25,6 +26,7 @@ class App extends React.Component<IAppProps, IAppState> {
 					</div>
 				</nav>
 				<FlashCard />
+				<ChoicesBox />
 			</div>
 		);
 	}
