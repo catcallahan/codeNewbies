@@ -13,13 +13,15 @@ class App extends React.Component<IAppProps, IAppState> {
 
 	render() {
 		if(this.state.navBar === 'home'){
-			return <NavBarHome />
-		}
-		return (
-			<div>
-				<FlashCard />
-			</div>
-		);
+			return (
+				<React.Fragment>
+					<NavBarHome />
+					<div>
+						<FlashCard />
+					</div>
+				</React.Fragment>
+			)}
+	
 	}
 }
 
