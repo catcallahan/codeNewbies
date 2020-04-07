@@ -9,7 +9,8 @@ const FlashCard: React.FC<FlashCardProps> = () => {
                 textAlign: 'center',
                 marginTop: '30px',
                 paddingTop: '38px',
-                paddingBottom: '38px'
+                paddingBottom: '38px',
+                borderRadius: '5%'
             }}>
                 <p style={{ margin: '0' }}>
                     Pretend this is a flash card
