@@ -3,7 +3,18 @@ import * as React from "react";
 const Home: React.FC<HomeProps> = () => {
 return(
     <div>
-        <h1>Test(delete test in views folder in Home file)</h1>
+        <h1> Home Page(test) Go test out the routes
+            /quiz
+            /flashcard
+            /about
+            /login
+            /resources
+            /review
+            /study
+            /userprofile
+            
+            
+             </h1>
     </div>
 )
 
@@ -14,3 +25,5 @@ return(
 
     interface HomeProps{}
     export default Home 
+
+    
