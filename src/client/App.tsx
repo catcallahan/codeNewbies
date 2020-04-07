@@ -1,7 +1,15 @@
 import * as React from "react";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import FlashCard from "./Components/views/FlashCard";
 import NavBarHome from "./Components/views/navbarHome";
+import Home from "./Components/views/Home";
+import Login from "./Components/views/Login";
+import Quiz from "./Components/views/Quiz";
+import Study from "./Components/views/Study";
+import Resources from "./Components/views/Resources";
+import Review from "./Components/views/Review";
+import User from "./Components/views/userProfile";
+import About from "./Components/views/aboutUs";
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
@@ -14,24 +22,48 @@ class App extends React.Component<IAppProps, IAppState> {
   render() {
     if (this.state.navBar === "home") {
       return (
-        <React.Fragment>
+        <BrowserRouter>
           <NavBarHome />
           {/* <div>
             <FlashCard />
           </div> */}
-          <Router>
-            <Switch>
-              <Route exact path="/flashcard" component = {FlashCard}></Route>
-              <Route exact path="/aboutUs"></Route>//aboutUs
-              <Route exact path="/Login"></Route>//Login
-              <Route exact path="/Quiz"></Route>//Quiz
-              <Route exact path="/Resources"></Route>//Resources
-              <Route exact path="/Review"></Route>//Review
-              <Route exact path="/Study"></Route>//Study
-              <Route exact path="/userprofile"></Route>//userProfile
-            </Switch>
-          </Router>
-        </React.Fragment>
+          <Switch>
+            <Route exact path="/flashcard">
+              {" "}
+              <FlashCard />
+            </Route>
+            <Route exact path="/">
+              {" "}
+              <Home />
+            </Route>
+            <Route exact path="/about">
+              {" "}
+              < About/>
+            </Route>
+            
+            <Route exact path="/login">
+              {" "}
+              <Login />
+            </Route>
+
+            <Route exact path="/quiz">
+              {" "}
+              <Quiz />
+            </Route>
+            <Route exact path="/resources">
+              <Resources />
+            </Route>
+            <Route exact path="/review">
+              <Review />
+            </Route>
+            <Route exact path="/study">
+              <Study />
+            </Route>
+            <Route exact path="/userprofile">
+              <User />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       );
     }
   }
