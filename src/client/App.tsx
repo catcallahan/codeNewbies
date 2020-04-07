@@ -24,14 +24,7 @@ class App extends React.Component<IAppProps, IAppState> {
       return (
         <BrowserRouter>
           <NavBarHome />
-          {/* <div>
-            <FlashCard />
-          </div> */}
           <Switch>
-            <Route exact path="/flashcard">
-              {" "}
-              <FlashCard />
-            </Route>
             <Route exact path="/">
               {" "}
               <Home />
@@ -56,10 +49,11 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route exact path="/review">
               <Review />
             </Route>
-            <Route exact path="/study">
-              <Study />
+            <Route exact path="/flashcard">
+              {" "}
+              <FlashCard />
             </Route>
-            <Route exact path="/userprofile">
+             <Route exact path="/userprofile">
               <User />
             </Route>
           </Switch>
