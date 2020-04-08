@@ -1,6 +1,28 @@
 $theme-colors: (
-    'primary': #0091ea,
-    'navbarColor' : #0535FF
+    'darkBlue' : #314455,
+    'darkRoseColor' : #9F5A63,
+    'brightRoseColor' : #c96567,
+    'burgandyColor' : #644e5B,
+    'greyColor' : #675682
+    
+   
+    
 );
+
+
+body {
+    background: linear-gradient(135deg,#c96567 50%, #9f5a63 40%, #644e5b 100%);
+    font-family: ('Titillium Web', sans-serif) !important;
+}
+
+.circle:hover {
+    background: (#182129) !important;
+    height: 225px !important ;
+    width: 225px !important;
+    cursor: 'pointer' !important
+}
+
+
+
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
