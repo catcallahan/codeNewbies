@@ -1,7 +1,13 @@
 import * as React from "react";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import FlashCard from "./Components/views/FlashCard";
-import NavBarHome from "./Components/views/navbarHome";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./views/Home";
+import Login from "./views/Login";
+import Quiz from "./views/Quiz";
+import Study from "./views/Study";
+import Resources from "./views/Resources";
+import Review from "./views/Review";
+import User from "./views/userProfile";
+import About from "./views/aboutUs";
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
@@ -12,28 +18,44 @@ class App extends React.Component<IAppProps, IAppState> {
   }
 
   render() {
-    if (this.state.navBar === "home") {
+    
       return (
-        <React.Fragment>
-          <NavBarHome />
-          {/* <div>
-            <FlashCard />
-          </div> */}
-          <Router>
-            <Switch>
-              <Route exact path="/flashcard" component = {FlashCard}></Route>
-              <Route exact path="/aboutUs"></Route>//aboutUs
-              <Route exact path="/Login"></Route>//Login
-              <Route exact path="/Quiz"></Route>//Quiz
-              <Route exact path="/Resources"></Route>//Resources
-              <Route exact path="/Review"></Route>//Review
-              <Route exact path="/Study"></Route>//Study
-              <Route exact path="/userprofile"></Route>//userProfile
-            </Switch>
-          </Router>
-        </React.Fragment>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              {" "}
+              <Home />
+            </Route>
+            <Route exact path="/about">
+              {" "}
+              < About/>
+            </Route>
+            
+            <Route exact path="/login">
+              {" "}
+              <Login />
+            </Route>
+
+            <Route exact path="/quiz">
+              {" "}
+              <Quiz />
+            </Route>
+            <Route exact path="/resources">
+              <Resources />
+            </Route>
+            <Route exact path="/review">
+              <Review />
+            </Route>
+            <Route exact path="/study">
+              {" "}
+              <Study />
+            </Route>
+             <Route exact path="/userprofile">
+              <User />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       );
-    }
   }
 }
 
