@@ -28,7 +28,7 @@ return(
             <h2>{clickPhrase}</h2>
         </div>
         <div className = "d-flex flex-row justify-content-center my-3 pt-2">
-            <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%'}}>
+            <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
                 <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>front</div>
                 <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>End</div>
             </div>
