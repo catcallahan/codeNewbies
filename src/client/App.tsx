@@ -1,15 +1,13 @@
 import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import FlashCard from "./Components/views/FlashCard";
-import NavBarHome from "./Components/views/navbarHome";
-import Home from "./Components/views/Home";
-import Login from "./Components/views/Login";
-import Quiz from "./Components/views/Quiz";
-import Study from "./Components/views/Study";
-import Resources from "./Components/views/Resources";
-import Review from "./Components/views/Review";
-import User from "./Components/views/userProfile";
-import About from "./Components/views/aboutUs";
+import Home from "./views/Home";
+import Login from "./views/Login";
+import Quiz from "./views/Quiz";
+import Study from "./views/Study";
+import Resources from "./views/Resources";
+import Review from "./views/Review";
+import User from "./views/userProfile";
+import About from "./views/aboutUs";
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
@@ -20,10 +18,9 @@ class App extends React.Component<IAppProps, IAppState> {
   }
 
   render() {
-    if (this.state.navBar === "home") {
+    
       return (
         <BrowserRouter>
-          <NavBarHome />
           <Switch>
             <Route exact path="/">
               {" "}
@@ -49,9 +46,9 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route exact path="/review">
               <Review />
             </Route>
-            <Route exact path="/flashcard">
+            <Route exact path="/study">
               {" "}
-              <FlashCard />
+              <Study />
             </Route>
              <Route exact path="/userprofile">
               <User />
@@ -59,7 +56,6 @@ class App extends React.Component<IAppProps, IAppState> {
           </Switch>
         </BrowserRouter>
       );
-    }
   }
 }
 
