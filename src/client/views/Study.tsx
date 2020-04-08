@@ -1,30 +1,35 @@
 import * as React from "react";
+import NavBar3 from "./Components/nav3";
+import FlashCard from "./Components/FlashCard";
+import ResourceBox from "./Components/ResourceBox";
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IconContext } from 'react-icons';
 
 const Study: React.FC<StudyProps> = () => {
-    return(
-        <div>
-            <h1> Study Page(test with flash card) </h1>
-            <div
-            className="flash-card border border-dark shadow-sm"
-            style={{
-                height: '100px',
-                textAlign: 'center',
-                marginTop: '30px',
-                paddingTop: '38px',
-                paddingBottom: '38px'
-            }}>
-                <p style={{ margin: '0' }}>
-                    Pretend this is a flash card
-                    {/* This is where the content will go. The line above is a placeholder */}
-                </p>
-        </div>
-        </div>
+    return (
+        <React.Fragment>
+            <NavBar3 />
+            <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
+                <IconContext.Provider value={{ size: "4em" }}>
+                    <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>
+                        <IoIosArrowBack />
+                    </div>
+                </IconContext.Provider>
+                <FlashCard />
+                <IconContext.Provider value={{ size: "4em" }}>
+                    <div className="col-2" style={{ display: "flex", justifyContent: "flex-start", padding: "0", alignItems: "center" }}>
+                        <IoIosArrowForward />
+                    </div>
+                </IconContext.Provider>
+            </div>
+            <div style={{ marginTop: "30px", display: "flex", justifyContent: "space-around" }}>
+                <ResourceBox />
+            </div>
+        </React.Fragment>
     )
-    
-    }
-    
-    
-    
-    
-        interface StudyProps{}
-        export default Study
+}
+
+interface StudyProps { }
+
+export default Study
