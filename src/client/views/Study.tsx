@@ -1,30 +1,31 @@
 import * as React from "react";
+import NavBar3 from "./Components/nav3";
+import FlashCard from "./Components/FlashCard";
+import ResourceBox from "./Components/ResourceBox";
 
 const Study: React.FC<StudyProps> = () => {
-    return(
-        <div>
-            <h1> Study Page(test with flash card) </h1>
-            <div
-            className="flash-card border border-dark shadow-sm"
+    return (
+        <React.Fragment>
+
+            <NavBar3 />
+            <div 
             style={{
-                height: '100px',
-                textAlign: 'center',
-                marginTop: '30px',
-                paddingTop: '38px',
-                paddingBottom: '38px'
+                // marginTop: "30px",
+                // display: "flex",
+                // flexDirection: "row",
+                // justifyContent: "around",
+                // height: "300px"
             }}>
-                <p style={{ margin: '0' }}>
-                    Pretend this is a flash card
-                    {/* This is where the content will go. The line above is a placeholder */}
-                </p>
-        </div>
-        </div>
+                <div className="arrow arrow-left col-3" style={{ backgroundColor: "blue" }}></div>
+                <FlashCard />
+                <div className="arrow arrow-right col-3" style={{ backgroundColor: "blue" }}></div>
+            </div>
+                <ResourceBox />
+
+        </React.Fragment>
     )
-    
-    }
-    
-    
-    
-    
-        interface StudyProps{}
-        export default Study
+}
+
+interface StudyProps { }
+
+export default Study
