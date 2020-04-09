@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-class NavBar2 extends React.Component<INavProps, INavState> {
+class NavBar4 extends React.Component<INavProps, INavState> {
     constructor(props: INavProps){
         super(props)
     }
@@ -14,9 +14,8 @@ render(){
 						<span className="navbar-toggler-icon"></span></button>
 					<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
-							<a className="nav-item nav-link active text-white" href="#">Home <span className="sr-only">(current)</span></a>
-							<a className="nav-item nav-link justify-content-end text-white" href="#">quizMe</a>
-							<a className="nav-item nav-link justify-content-end text-white" href="#">newCatagory</a>
+							<a className="nav-item nav-link active text-white" href="#">aboutUs <span className="sr-only">(current)</span></a>
+							<a className="nav-item nav-link text-white" href="#">signIn / signUp</a>
 						</div>
 					</div>
 				</nav>
@@ -35,4 +34,4 @@ interface INavState {
 }
 
 
-export default NavBar2
+export default NavBar4

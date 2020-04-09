@@ -8,7 +8,7 @@ class NavBar3 extends React.Component<INavProps, INavState> {
 render(){
     return(
             <div>
-				<nav className="navbar navbar-expand-lg navbar-light bg-navBarColor">
+				<nav className="navbar navbar-expand-lg navbar-light bg-darkBlue">
 					<a className="navbar-brand text-white" href="#">codeNewbies</a>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span></button>
