@@ -8,13 +8,14 @@ const FlashCard: React.FC<FlashCardProps> = () => {
                 textAlign: "center",
                 borderRadius: "1%",
                 paddingTop: "162px",
-                paddingBottom: "162px"
+                paddingBottom: "162px",
+                backgroundColor: "#ace5ee"
             }}>
-                <h2 style={{ margin: "0" }}>
+                <h1 style={{ margin: "0" }}>
                     Pretend this is a flash card
                     {/* This is where the content will go. The line above is a placeholder */}
                     {/* This needs a way to draw in from the database terms and definitions */}
-                </h2>
+                </h1>
         </div>
     )
 };
