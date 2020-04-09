@@ -15,7 +15,7 @@ render(){
 					<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
 							<a className="nav-item nav-link active text-white" href="#">Home <span className="sr-only">(current)</span></a>
-							<a className="nav-item nav-link justify-content-end text-white" href="#">newCatagory</a>
+							<a className="nav-item nav-link justify-content-end text-white" href="#">newCategory</a>
 							<a className="nav-item nav-link justify-content-end text-white" href="#">studyMore</a>
 						</div>
 					</div>
