@@ -20,15 +20,15 @@ const User: React.FC<UserProps> = () => {
             <div className = 'topbar bg-darkBlue mt-3' style ={{height: '20px', width: 'auto'}}></div>
             <div className = "d-flex flex-row justify-content-center my-3 pt-2">
             <Link className=" d-flex flex-column m-3 oval bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '300px', width: '300px', borderRadius: '90%', cursor: 'pointer'}} to='/study'>
-                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>Study</div>
+                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>study</div>
                 <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>Cards</div>
             </Link>
             <Link className=" d-flex flex-column m-3 oval bg-darkBlue justify-content-center align-items-center shadow-sm" style = {{height: '300px', width: '300px', borderRadius: '50%', cursor: 'pointer'}} to='/review'>
-                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>Review</div>
+                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>review</div>
                 <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>Missed</div>
             </Link>
             <Link className=" d-flex flex-column m-3 oval bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '300px', width: '300px', borderRadius: '100%', cursor: 'pointer'}} to='/quiz'>
-                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>Quiz</div>
+                <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>quiz</div>
                 <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>Me</div>
             </Link>
             
