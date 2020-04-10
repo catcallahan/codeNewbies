@@ -55,10 +55,12 @@ body {
     }
 }
 
-.oval:hover:hover {
+.oval:hover {
     background: (#182129) !important;
-    height: 400px !important ;
-    width: 400px !important;
+    text-decoration: none !important;
+    height: 330px !important ;
+    width: 330px !important;
+    transition: 0.25s
 }
 
 
