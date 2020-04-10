@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 
 const Home: React.FC<HomeProps> = () => {
-    let techWord = '{ reviewTerms }';
-    let studyWord = '{ studyCards }';
+    let profileWord = '{ myProfile }';
+    let aboutWord = '{ aboutUs }';
     let quizWord = '{ quizMe }';
     let resourcesWord = '{ moreResources }';
     let clickPhrase = '{ "Choose a Category to Study" }'
@@ -17,11 +17,11 @@ return(
         <NavBarHome />
         <div className = 'container-fluid'>
             <div className="row">
-                <h1 className = 'mainlogo ml-3 mt-2 mb-3 col-lg-12 col-md-4 col-sm-2' style = {{fontSize: '100px', color: '#FFFFFF'}}>codeNewbie</h1>
+                <h1 className = 'pl-3 mt-2 mb-3 col-lg-12 col-md-4 col-sm-2' id= 'mainlogo' style = {{fontSize: '100px', color: '#FFFFFF'}}>codeNewbie</h1>
             </div>
             <div className = "d-flex flex-row justify-content-around my-3 pt-2 row">
-                <Link className="btn btn-darkBlue shadow-sm" style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/review'>{techWord}</Link>
-                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/study'>{studyWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/about'>{aboutWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm" style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/userprofile'>{profileWord}</Link>
                 <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/quiz'>{quizWord}</Link>
                 <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF',width: '225px', textShadow: '1px 1px #D86410'}} to = '/resources'>{resourcesWord}</Link>
             </div>
@@ -33,7 +33,7 @@ return(
             <h2 className = 'col-lg-12 col-md-6 col-sm-'>{clickPhrase}</h2>
             </div>
         </div>
-        <div className = "d-flex flex-row justify-content-center my-3 pt-2 container">
+        <div className = "d-flex flex-row justify-content-center my-3 pt-2 container" id ='circleBox'>
             <div className="row">
                 <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
                     <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>front</div>
