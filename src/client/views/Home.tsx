@@ -1,9 +1,10 @@
 import * as React from "react";
 import NavBarHome from "./Components/navbarHome";
+import { Link } from "react-router-dom";
 
 
 const Home: React.FC<HomeProps> = () => {
-    let techWord = '{ techQuestions }';
+    let techWord = '{ reviewTerms }';
     let studyWord = '{ studyCards }';
     let quizWord = '{ quizMe }';
     let resourcesWord = '{ moreResources }';
@@ -19,10 +20,10 @@ return(
                 <h1 className = 'mainlogo ml-3 mt-2 mb-3 col-lg-12 col-md-4 col-sm-2' style = {{fontSize: '100px', color: '#FFFFFF'}}>codeNewbie</h1>
             </div>
             <div className = "d-flex flex-row justify-content-around my-3 pt-2 row">
-                <button className="btn btn-darkBlue shadow-sm" style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}}>{techWord}</button>
-                <button className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}}>{studyWord}</button>
-                <button className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}}>{quizWord}</button>
-                <button className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF',width: '225px', textShadow: '1px 1px #D86410'}}>{resourcesWord}</button>
+                <Link className="btn btn-darkBlue shadow-sm" style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/review'>{techWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/study'>{studyWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/quiz'>{quizWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF',width: '225px', textShadow: '1px 1px #D86410'}} to = '/resources'>{resourcesWord}</Link>
             </div>
             <div className = 'topbar bg-darkBlue' style ={{height: '11px', width: 'auto'}}></div>
         </div>
