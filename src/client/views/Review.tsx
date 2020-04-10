@@ -10,10 +10,10 @@ const Review: React.FC<LoginProps> = () => {
            <NavBar5 />
            <div className = 'container-fluid'>
                <div className="row">
-               <h1 className = 'ml-4 mt-2 mb-3 col-sm-4' style = {{fontSize: '75px', color: '#FFFFFF'}}>reviewCards</h1>
-               <div className = 'topbar bg-darkBlue' style ={{height: '11px', width: 'auto'}}></div>
+               <h1 className = 'ml-4 mt-2 mb-3 col-sm-4' style = {{fontSize: '75px', color: '#FFFFFF'}} id ='reviewHeader'>reviewCards</h1>
                </div>
            </div>
+               <div className = 'topbar bg-darkBlue' style ={{height: '11px', width: 'auto'}}></div>
            <div className = 'd-flex justify-content-end container-fluid' id = 'FEcategoryContainer'>
                <div className="row">
                     <h2 className = 'mr-5 mt-4 mb-3 col-sm-4' style = {{fontSize: '64px', color: '#FFFFFF'}}>frontEnd</h2>
