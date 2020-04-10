@@ -7,7 +7,7 @@ const Login: React.FC<LoginProps> = () => {
             <NavBarHome />
             {/* SIGN IN */}
             <div className='d-flex justify-content-around row pt-5'>
-                <span className=' shadow-lg col-sm-4 rounded border border-white'd>
+                <span className=' shadow-lg col-sm-4 rounded border border-white'>
                     <span className="d-flex justify-content-center">
                         <h1 className='text-darkBlue' >signIn</h1>
                     </span>
