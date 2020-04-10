@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class NavBar2 extends React.Component<INavProps, INavState> {
@@ -9,14 +10,13 @@ render(){
     return(
             <div>
 				<nav className="navbar navbar-expand-lg navbar-light bg-darkBlue">
-					<a className="navbar-brand text-white" href="#">codeNewbies</a>
+					<Link className="navbar-brand text-white" to = '/'>codeNewbies</Link>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span></button>
 					<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
-							<a className="nav-item nav-link active text-white" href="#">Home <span className="sr-only">(current)</span></a>
-							<a className="nav-item nav-link justify-content-end text-white" href="#">quizMe</a>
-							<a className="nav-item nav-link justify-content-end text-white" href="#">newCatagory</a>
+						<Link className="nav-item nav-link justify-content-end text-white" to ='/Quiz'>quizMe</Link>
+						<Link className="nav-item nav-link justify-content-end text-white" to = '/'>newCategory</Link>
 						</div>
 					</div>
 				</nav>

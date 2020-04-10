@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class NavBarHome extends React.Component<INavProps, INavState> {
@@ -14,7 +15,8 @@ render(){
 						<span className="navbar-toggler-icon"></span></button>
 					<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
-							<a className="nav-item nav-link text-white" href="#">signIn / signUp</a>
+							{/* <a className="nav-item nav-link text-white" href="#">signIn / signUp</a> */}
+							<Link className="nav-item nav-link text-white" to = '/Login'>signIn / signUp</Link> 
 						</div>
 					</div>
 				</nav>

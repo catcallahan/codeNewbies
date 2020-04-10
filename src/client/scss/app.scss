@@ -21,6 +21,12 @@ body {
     width: 225px !important;
 }
 
+@media(min-width:768px) {
+    body {
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat !important;
+    }
+}
 
 
 
