@@ -11,13 +11,13 @@ const Study: React.FC<StudyProps> = () => {
         <React.Fragment>
             <NavBar3 />
             <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
-                <IconContext.Provider value={{ size: "4em" }}>
+                <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>
                         <IoIosArrowBack />
                     </div>
                 </IconContext.Provider>
                 <FlashCard />
-                <IconContext.Provider value={{ size: "4em" }}>
+                <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-start", padding: "0", alignItems: "center" }}>
                         <IoIosArrowForward />
                     </div>
