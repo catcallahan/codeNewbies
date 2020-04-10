@@ -8,6 +8,7 @@ import Resources from "./views/Resources";
 import Review from "./views/Review";
 import User from "./views/userProfile";
 import About from "./views/aboutUs";
+import Category from "./views/Category"
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
@@ -51,8 +52,14 @@ class App extends React.Component<IAppProps, IAppState> {
               <Study />
             </Route>
              <Route exact path="/userprofile">
+             {" "}
               <User />
             </Route>
+            <Route exact path="/category">
+            {" "}
+              <Category />
+            </Route>
+            
           </Switch>
         </BrowserRouter>
       );
