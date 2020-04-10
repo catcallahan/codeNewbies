@@ -1,13 +1,13 @@
 import * as React from "react";
-import NavBar2 from "./Components/nav2";
+import NavBarHome from "./Components/navbarHome";
 
 const Login: React.FC<LoginProps> = () => {
     return (
         <React.Fragment>
-            <NavBar2 />
+            <NavBarHome />
             {/* SIGN IN */}
-            <div className='row'>
-                <span className='shadow-lg col-sm-6'>
+            <div className='d-flex justify-content-around row pt-5'>
+                <span className=' shadow-lg col-sm-4 rounded border border-white'd>
                     <span className="d-flex justify-content-center">
                         <h1 className='text-darkBlue' >signIn</h1>
                     </span>
@@ -29,7 +29,7 @@ const Login: React.FC<LoginProps> = () => {
                     </span>
                 </span>
             {/* SIGNUP */}
-                <span className='shadow-lg col-sm-6'>
+                <span className=' shadow-lg col-sm-4 rounded border border-white'>
                     <span className="d-flex justify-content-center">
                         <h1 className='text-darkBlue' >signUp</h1>
                     </span>
