@@ -35,22 +35,26 @@ return(
         </div>
         <div className = "d-flex flex-row justify-content-center my-3 pt-2 container" id ='circleBox'>
             <div className="row">
-                <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
+                <Link className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" 
+                style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}} to = '/study'>
                     <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>front</div>
                     <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>End</div>
-                </div>
-                <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
+                </Link>
+                <Link className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" 
+                style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}} to ='/study'>
                     <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>back</div>
                     <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>End</div>
-                </div>
-                <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
+                </Link>
+                <Link className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" 
+                style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}} to='/study'>
                     <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>data</div>
                     <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>Base</div>
-                </div>
-                <div className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}}>
+                </Link>
+                <Link className=" d-flex flex-column m-3 circle bg-darkBlue justify-content-center align-items-center shadow-lg" 
+                style = {{height: '200px', width: '200px', borderRadius: '50%', cursor: 'pointer'}} to='/study'>
                     <div className="topWord" style = {{fontSize: '36px', color: '#FFFFFF'}}>all</div>
                     <div className="bottomWord p-0 m-0" style = {{fontSize: '40px', color: '#c96567'}}>Terms</div>
-            </div>
+                </Link>
             
             </div>
         </div>

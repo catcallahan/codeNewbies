@@ -10,6 +10,11 @@ const Study: React.FC<StudyProps> = () => {
     return (
         <React.Fragment>
             <NavBar3 />
+            <div className="container d-flex justify-content-end">
+                <div className="row">
+                    <p className ='text-white' id='clickFlip'>Click Card to Flip!</p>
+                </div>
+            </div>
             <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>

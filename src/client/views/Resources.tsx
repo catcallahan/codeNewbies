@@ -6,8 +6,12 @@ const Resources: React.FC<ResourceProps> = () => {
         <React.Fragment>
             <NavBar2 />
             <span className="d-flex justify-content-start pl-4">
-                <h1 className='text-white display-2' >Resources</h1>
+                <h1 className='text-white display-2' id='resourcesHeader' >Resources</h1>
             </span>
+            <div
+            className="topbar bg-darkBlue"
+            style={{ height: "11px", width: "auto" }}
+          ></div>
             <div className="d-flex justify-content-around">
                 <span className="d-flex justify-content-center col-sm-8 flex-column ml-3 mr-3 mb-4 pt-4 ">
                     {/* MDN Web Docs */}

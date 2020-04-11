@@ -17,9 +17,16 @@ body {
 
 .circle:hover {
     background: (#182129) !important;
+    text-decoration: none !important;
     height: 225px !important ;
     width: 225px !important;
     transition: 0.25s;
+}
+
+#clickFlip {
+    padding-right: 7em;
+    padding-top: 5em;
+    margin-bottom: 0;
 }
 
 
@@ -37,6 +44,14 @@ body {
         font-size: 60px !important;
         padding-left: 0;
     }
+    #userCircles {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    #resourcesHeader {
+        font-size: 80px !important;
+    }
  
 }
 
@@ -53,6 +68,12 @@ body {
     #reviewHeader {
         font-size: 75px;
     }
+    
+    #userCircles {
+        display: flex;
+        flex-direction: row !important;
+    }
+
 }
 
 .oval:hover {
