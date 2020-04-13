@@ -23,7 +23,7 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
                         backgroundColor: "#f9e5e4"
                     }}>
                     <h1 style={{ margin: "0" }}>
-                        <p style={{ color: "9F5A63" }}>term</p>
+                    <p style={{ color: "9F5A63" }}>{this.props.card.cardText}</p>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
                     </h1>
@@ -42,7 +42,7 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
                         backgroundColor: "#f9e5e4"
                     }}>
                     <h1 style={{ margin: "0" }}>
-                    <p style={{ color: "9F5A63" }}>words</p>
+                    <p style={{ color: "9F5A63" }}>{this.props.card.cardTitle}</p>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
                     </h1>
@@ -53,7 +53,12 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
 };
 
 interface IFlashCardProps {
-  
+  card: {
+    categoryLevel: string,
+    skillLevel: string,
+    cardTitle: string,
+    cardText: string
+  }
  };
 
  interface IFlashCardState {
