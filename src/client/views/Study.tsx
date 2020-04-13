@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavBar3 from "./Components/nav3";
+import NavBar2 from "./Components/nav3";
 import FlashCard from "./Components/FlashCard";
 import ResourceBox from "./Components/ResourceBox";
 import { useHistory} from 'react-router-dom'
@@ -25,12 +25,7 @@ const Study: React.FC<IStudyProps> = props => {
       
     return (
         <React.Fragment>
-            <NavBar3 /> 
-            <div className="container d-flex justify-content-end">
-                <div className="row">
-                    <p className ='text-white' id='clickFlip'>Click Card to Flip!</p>
-                </div>
-            </div>
+            <NavBar2 />
             <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>
