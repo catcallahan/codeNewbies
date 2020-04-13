@@ -2,14 +2,30 @@ import * as React from "react";
 import NavBar3 from "./Components/nav3";
 import FlashCard from "./Components/FlashCard";
 import ResourceBox from "./Components/ResourceBox";
+import { useHistory} from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons';
+import { ICard } from '../Utils/types'
+import { FaBlog } from "react-icons/fa";
 
-const Study: React.FC<StudyProps> = () => {
+const Study: React.FC<IStudyProps> = props => {
+
+    //state object that increments cards when they hit
+
+    const [cards, setCards] = useState<ICard[]>([]);
+        useEffect(()=> {
+            (async () => {
+                let res = await fetch('/api/cards');
+                let cards = await res.json();
+                setCards(cards)
+            })()
+        }, [])
+      
     return (
         <React.Fragment>
-            <NavBar3 />
+            <NavBar3 /> 
             <div className="container d-flex justify-content-end">
                 <div className="row">
                     <p className ='text-white' id='clickFlip'>Click Card to Flip!</p>
@@ -35,6 +51,9 @@ const Study: React.FC<StudyProps> = () => {
     )
 }
 
-interface StudyProps { }
+interface IStudyProps { 
+    cards: ICard
+}
+
 
 export default Study
