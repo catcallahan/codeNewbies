@@ -1,6 +1,6 @@
 import { Query} from '../';
 import { Connection } from '../index'
-import Category from '../../../client/views/Category';
+// import Category from '../../../client/views/Category';
 
 export const all = async () => Query('SELECT * FROM cards');
 
