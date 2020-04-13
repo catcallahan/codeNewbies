@@ -1,7 +1,12 @@
 import * as React from 'react';
+import { ICard } from '../../Utils/types';
+import { IoMdCard } from 'react-icons/io';
 
-class FlashCard extends React.Component {
-    state = { clicked: false };
+class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
+    state = { 
+        clicked: false,
+        
+     };
 
     render() {
 
@@ -18,7 +23,7 @@ class FlashCard extends React.Component {
                         backgroundColor: "#f9e5e4"
                     }}>
                     <h1 style={{ margin: "0" }}>
-                        <p style={{ color: "9F5A63" }}>Definition</p>
+                        <p style={{ color: "9F5A63" }}>term</p>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
                     </h1>
@@ -37,7 +42,7 @@ class FlashCard extends React.Component {
                         backgroundColor: "#f9e5e4"
                     }}>
                     <h1 style={{ margin: "0" }}>
-                        <p style={{ color: "9F5A63" }}>Vocab</p>
+                    <p style={{ color: "9F5A63" }}>words</p>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
                     </h1>
@@ -47,6 +52,12 @@ class FlashCard extends React.Component {
     }
 };
 
-interface FlashCardProps { };
+interface IFlashCardProps {
+  
+ };
+
+ interface IFlashCardState {
+
+ }
 
 export default FlashCard;

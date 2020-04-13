@@ -9,13 +9,14 @@ import Review from "./views/Review";
 import User from "./views/userProfile";
 import About from "./views/aboutUs";
 import Category from "./views/Category"
+import { ICard } from "./Utils/types";
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props);
     this.state = {
-      navBar: "home",
-    };
+      cards: []
+    }
   }
 
   render() {
@@ -47,10 +48,7 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route exact path="/review">
               <Review />
             </Route>
-            <Route exact path="/study">
-              {" "}
-              <Study />
-            </Route>
+            <Route exact path="/study" component = {Study}></Route>
              <Route exact path="/userprofile">
              {" "}
               <User />
@@ -66,10 +64,12 @@ class App extends React.Component<IAppProps, IAppState> {
   }
 }
 
-export interface IAppProps {}
+export interface IAppProps {
+
+}
 
 export interface IAppState {
-  navBar: string;
+  cards: Array<any>
 }
 
 export default App;
