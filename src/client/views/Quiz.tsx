@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavBar2 from "./Components/nav3";
+import NavBar2 from "./Components/nav2";
 import FlashCard from "./Components/FlashCard";
 import AnswerBox from "./Components/AnswerBox";
 import { IoIosArrowBack } from 'react-icons/io';
