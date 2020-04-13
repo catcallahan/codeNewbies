@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavBar3 from "./Components/nav3";
+import NavBar2 from "./Components/nav3";
 import FlashCard from "./Components/FlashCard";
 import AnswerBox from "./Components/AnswerBox";
 import { IoIosArrowBack } from 'react-icons/io';
@@ -9,7 +9,7 @@ import { IconContext } from 'react-icons';
 const Quiz: React.FC<QuizProps> = () => {
     return (
         <React.Fragment>
-            <NavBar3 />
+            <NavBar2 />
             <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>
@@ -25,6 +25,9 @@ const Quiz: React.FC<QuizProps> = () => {
             </div>
             <div style={{ marginTop: "30px", display: "flex", justifyContent: "space-around" }}>
                 <AnswerBox />
+            </div>
+            <div style={{ marginTop: "30px", display: "flex", justifyContent: "center"}}>
+                <button className="btn btn-lg btn-brightRoseColor border border-white">Submit Answer</button>
             </div>
         </React.Fragment>
     )
