@@ -18,15 +18,14 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
                     style={{
                         textAlign: "center",
                         borderRadius: "2%",
-                        paddingTop: "162px",
+                        paddingTop: "100px",
                         paddingBottom: "162px",
                         backgroundColor: "#f9e5e4"
                     }}>
-                    <h1 style={{ margin: "0" }}>
-                    <p style={{ color: "9F5A63" }}>{this.props.card.cardText}</p>
+                    <h3>Definition:</h3>
+                    <h1 className ='cardText'style={{ color: "314455" }}>{this.props.card.cardText}</h1>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
-                    </h1>
                 </div>
             )
         } else {
@@ -37,15 +36,14 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
                     style={{
                         textAlign: "center",
                         borderRadius: "2%",
-                        paddingTop: "162px",
+                        paddingTop: "120px",
                         paddingBottom: "162px",
                         backgroundColor: "#f9e5e4"
                     }}>
-                    <h1 style={{ margin: "0" }}>
-                    <p style={{ color: "9F5A63" }}>{this.props.card.cardTitle}</p>
+                    <h3>Term:</h3>
+                    <h1 className ='cardTitle' style={{ color: "9F5A63"}}>{this.props.card.cardTitle}</h1>
                         {/* This is where the content will go. The line above is a placeholder */}
                         {/* This needs a way to draw in from the database terms and definitions */}
-                    </h1>
                 </div>
             )
         }

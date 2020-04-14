@@ -48,7 +48,7 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route exact path="/review">
               <Review />
             </Route>
-            <Route exact path="/study" component = {Study}></Route>
+            <Route exact path="/study/:category?" component = {Study}></Route>
              <Route exact path="/userprofile">
              {" "}
               <User />

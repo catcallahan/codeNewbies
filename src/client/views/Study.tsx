@@ -2,32 +2,37 @@ import * as React from "react";
 import NavBar2 from "./Components/nav2";
 import FlashCard from "./Components/FlashCard";
 import ResourceBox from "./Components/ResourceBox";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { IconContext } from "react-icons";
 import { ICard } from "../Utils/types";
-import { FaBlog } from "react-icons/fa";
+
 
 
 let indexCounter = 0;
 const Study: React.FC<IStudyProps> = (props) => {
   //state object that increments cards when they hit
+  const { category } = useParams()
   const [cards, setCards] = useState<ICard[]>(null);
   const [counter, setCounter] = useState<number>(0);
   useEffect(() => {
     (async () => {
-      let res = await fetch("/api/cards");
+      let res = await fetch(`/api/${category}`);
       let cards = await res.json();
       setCards(cards);
     })();
-  }, []);
+  }, [category]);
 
   
 
   const nextClick = () => {
-    indexCounter++;
+    if(indexCounter == (cards.length - 1)){
+        indexCounter = 0;
+    } else if (indexCounter < (cards.length - 1)){
+        indexCounter++;
+    }
     setCounter(indexCounter)
   };
 
@@ -37,7 +42,7 @@ const Study: React.FC<IStudyProps> = (props) => {
       setCounter(indexCounter)
     }
     if (indexCounter < 0){
-        alert('Can\'t go Back')
+        alert('Can\'t go Back. Try Clicking the Next Arrow Instead.')
         setCounter(0)
     }
   };
@@ -68,6 +73,7 @@ const Study: React.FC<IStudyProps> = (props) => {
               justifyContent: "flex-end",
               padding: "0",
               alignItems: "center",
+              cursor: 'pointer'
             }}
           >
             <IoIosArrowBack onClick ={() => backClick()}/>
@@ -84,6 +90,7 @@ const Study: React.FC<IStudyProps> = (props) => {
               justifyContent: "flex-start",
               padding: "0",
               alignItems: "center",
+              cursor: 'pointer'
             }}
           >
             <IoIosArrowForward onClick ={() => nextClick()}/>
@@ -97,13 +104,16 @@ const Study: React.FC<IStudyProps> = (props) => {
           justifyContent: "space-around",
         }}
       >
-        <ResourceBox />
+         {cards && (
+            <ResourceBox card={cards[counter]} />
+        )}
       </div>
     </React.Fragment>
   );
 };
 
 interface IStudyProps {
+  category: string  
   cards: ICard;
 }
 

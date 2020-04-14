@@ -52,6 +52,12 @@ body {
     #resourcesHeader {
         font-size: 80px !important;
     }
+    .cardText {
+        font-size: 20px;
+    }
+    .cardTitle {
+        font-size: 25px;
+    }
  
 }
 
@@ -72,6 +78,12 @@ body {
     #userCircles {
         display: flex;
         flex-direction: row !important;
+    }
+    .cardText {
+        font-size: 40px;
+    }
+    .cardTitle {
+        font-size: 50px;
     }
 
 }
