@@ -1,10 +1,10 @@
 import * as React from "react";
-import NavBar4 from "./Components/nav4";
+import NavBar2 from "./Components/nav2";
 
 const About: React.FC<AboutProps> = () => {
     return (
         <React.Fragment>
-            <NavBar4 />
+            <NavBar2 />
 
             <span className="d-flex justify-content-start pl-4">
                 <h1 className='text-white display-2'>aboutUs</h1>

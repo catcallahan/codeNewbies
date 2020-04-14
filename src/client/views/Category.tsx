@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavBar4 from "./Components/nav4";
+import NavBar2 from "./Components/nav2";
 
 const Category: React.FC<CategoryProps> = () => {
 
@@ -9,7 +9,7 @@ const Category: React.FC<CategoryProps> = () => {
 
   return (
     <React.Fragment>
-      <NavBar4 />
+      <NavBar2 />
       <section className="container-fluid ">
         <div className="d-flex justify-content-center mt-3">
           <h1
