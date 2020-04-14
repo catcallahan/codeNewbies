@@ -32,6 +32,10 @@ export const ABElevel = async () => Query( 'SELECT categoryLevel,skillLevel,card
 export const ADBlevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Database" and skillLevel="Advanced";')
 
 
+//Front End Quiz Begginer
+//export const QuizFEB = async () => Query('select c.skillLevel, c.categoryLevel, c.cardText , q.answerText , q.correctAnswerfrom cards as c left join quizanswers as q on q.questionId = cardIdwhere c.categoryLevel="Front End" and c.skillLevel="Begginer";')
+
+
 
 export default {
    all,
@@ -43,5 +47,6 @@ export default {
    IDBlevel,
    AFElevel,
    ABElevel,
-   ADBlevel
+   ADBlevel,
+   // QuizFEB 
 }
