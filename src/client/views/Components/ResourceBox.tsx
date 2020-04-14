@@ -1,17 +1,25 @@
 import * as React from 'react';
 
-const ResourceBox: React.FC<ResourceBoxProps> = () => {
+
+
+const ResourceBox: React.FC<ResourceBoxProps> = props => {
+
     return (
-        <div className="row resource-box border border-white shadow-sm text-wrap"
-            style={{
-                textAlign: "center",
-                paddingTop: "20px",
-                paddingRight: "10px",
-                borderRadius: "2%",
-                backgroundColor: "#8a3d40",
-            }}>
-            <div className="col-md-auto">
-                <ul> {/* The contents of this is dummy data until we can pull in actual data */}
+        <div className ='container resource-box'>
+            <div className="row justify-content-center" >
+                <div className="d-flex flex-column col-8 border border-white shadow-sm text-wrap justify-content-center pt-1 bg-darkBlue"
+                style={{
+                    paddingTop: "20px",
+                    paddingRight: "10px",
+                    borderRadius: "2%",
+                }}>
+                    <h2 className ='pl-2 mb-0 text-brightRoseColor'>Category: <a className='text-white'>{props.card.categoryLevel}</a> </h2>
+                    <h4 className ='pl-2 text-brightRoseColor'>Level: <a className='text-white'>{props.card.skillLevel}</a> </h4>
+                </div>
+            </div>
+
+            {/* <div className="col-md-auto"> */}
+                {/* <ul> 
                     <li>
                         <a href="https://www.w3schools.com/html/default.asp" target="_blank" style={{ color: "white", textDecoration: "underline" }}>What happens if these get long?</a>
                     </li>
@@ -40,11 +48,18 @@ const ResourceBox: React.FC<ResourceBoxProps> = () => {
                         <a href="https://www.w3schools.com/react/default.asp" target="_blank" style={{ color: "white", textDecoration: "underline" }}>React</a>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     )
 }
 
-interface ResourceBoxProps { };
+interface ResourceBoxProps { 
+    card: {
+        categoryLevel: string,
+        skillLevel: string,
+        cardTitle: string,
+        cardText: string
+      }
+};
 
 export default ResourceBox;
