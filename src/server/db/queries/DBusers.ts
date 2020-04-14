@@ -10,6 +10,9 @@ interface UserPost {
   skillLevel: string;
 }
 
+
+const nextUserId = async () => Query('SELECT MAX(userId) + 1 FROM users;');
+
  const all = async () => Query("SELECT * FROM users");
 
  const one = (id: any) =>
@@ -28,8 +31,11 @@ interface UserPost {
   );
 };
 
+
+
 export default {
   all,
   one,
   post,
+  nextUserId
 };
