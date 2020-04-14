@@ -1,6 +1,6 @@
 import * as React from "react";
 import NavBar2 from "./Components/nav2";
-import FlashCard from "./Components/FlashCard";
+import QuizCard from "./Components/QuizCard";
 import AnswerBox from "./Components/AnswerBox";
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -16,7 +16,7 @@ const Quiz: React.FC<QuizProps> = () => {
                         <IoIosArrowBack />
                     </div>
                 </IconContext.Provider>
-                <FlashCard />
+                <QuizCard />
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-start", padding: "0", alignItems: "center" }}>
                         <IoIosArrowForward />
