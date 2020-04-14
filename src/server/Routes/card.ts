@@ -111,5 +111,16 @@
 // })
 
 
+// router.get('/', async (req, res) => {
+//     try {
+//         const cards = await db.cards.QuizFEB()
+//       res.json(cards)
+//     } catch (error) {
+//         console.log(error);
+//         res.status(600).json('WOW :(');
+//     }
+// })
 
-export default router
+
+
+// export default router

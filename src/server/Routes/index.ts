@@ -64,11 +64,31 @@ router.get("/api/AdvanceDB", async (req, res) => {
 });
 
 
-// router.get("/api/QuizFEB", async (req,res) => {
-//    let quiz = await DBcards.QuizFEB()
-//    res.json(quiz)
-// })
+//front end beginner quiz
+router.get("/api/QuizFEB", async (req,res) => {
+   let quiz = await DBcards.QuizFEB()
+   res.json(quiz)
+})
 
+
+// back end beginner quiz
+router.get("/api/QuizBEB", async (req,res) => {
+  let quiz = await DBcards.QuizBEB()
+  res.json(quiz)
+})
+
+
+//database beginner quiz
+router.get("/api/QuizDBB", async (req,res) => {
+  let quiz = await DBcards.QuizDBB()
+  res.json(quiz)
+})
+
+//begginer quiz with all catergories
+router.get("/api/QuizALLb", async (req,res) => {
+  let quiz = await DBcards.QuizAllb()
+  res.json(quiz)
+})
 
 
 
