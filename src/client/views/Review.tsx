@@ -2,12 +2,12 @@ import * as React from "react";
 import { FaCheck } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa"
 import { IconContext } from 'react-icons'
-import NavBar5 from "./Components/nav5";
+import NavBar2 from "./Components/nav2";
 
 const Review: React.FC<LoginProps> = () => {
     return(
        <React.Fragment>
-           <NavBar5 />
+           <NavBar2 />
            <div className = 'container-fluid'>
                <div className="row">
                <h1 className = 'ml-4 mt-2 mb-3 col-sm-4' style = {{fontSize: '75px', color: '#FFFFFF'}} id ='reviewHeader'>reviewCards</h1>
