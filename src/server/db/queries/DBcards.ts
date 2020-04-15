@@ -32,17 +32,36 @@ export const BBElevel = async () => Query( 'SELECT categoryLevel,skillLevel,card
   const ADBlevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Database" and skillLevel="Advanced";')
 
 
-//Front End Quiz Begginer
-  const QuizFEB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Front End" and c.skillLevel="Beginner";')
+// //Front End Quiz Begginer
+//   const QuizFEB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Front End" and c.skillLevel="Beginner";')
 
-//Back End Quiz Begginer
- const QuizBEB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Back End" and c.skillLevel="Beginner";')
+// //Back End Quiz Begginer
+//  const QuizBEB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Back End" and c.skillLevel="Beginner";')
 
-//DataBase Quiz Begginer
- const QuizDBB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Database" and c.skillLevel="Beginner";')
+// //DataBase Quiz Begginer
+//  const QuizDBB = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.categoryLevel="Database" and c.skillLevel="Beginner";')
 
- //begginer quiz with all catergories
- const QuizAllb = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.skillLevel="Beginner";')
+//  //begginer quiz with all catergories
+//  const QuizAllb = async () => Query('SELECT c.skillLevel, c.categoryLevel, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizanswers as q on q.questionId = c.cardId where c.skillLevel="Beginner";')
+
+//begginer quiz all
+const QuizAllb = async () => Query('select c.cardId, c.categoryLevel, c.cardTitle, c.cardText , q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId = c.cardId where c.skillLevel="Beginner";')
+ 
+//select all questions and answers for skill level = beginner and category = front end
+ const QuizFEB = async () => Query('select c.cardId, c.categoryLevel, c.cardTitle, c.cardText , q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId = c.cardId where c.skillLevel="Beginner" and c.categoryLevel="Front End"; ')
+ 
+ //select all questions and answers for skill level = beginner and category = back end
+ const QuizBEB = async () => Query('select c.cardId, c.categoryLevel, c.cardTitle, c.cardText , q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId=c.cardId where c.skillLevel="Beginner" and c.categoryLevel="Back End";;')
+
+ //select all questions and answers for skill level = beginner and category = database
+ const QuizDBB = async () => Query('select c.cardId, c.cardTitle, c.cardText , q.answerText, q.correctAnswerfrom codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId=c.cardIdwhere c.skillLevel="Beginner" and c.categoryLevel="Database";')
+
+ //select all card questions by skill level and category level
+ // const ??????? = async () => Query('select c.cardId, c.cardTitle, c.cardText from codenewbies.cards as c where c.skillLevel="Beginner" and c.categoryLevel="Front End"')
+
+ //selecting answers by specific cardID (in this case, cardId = 5 (while loop))
+ const quizAnswers = async (id:any) => Query('select q.cardId, q.answerText, q.correctAnswer from codenewbies.quizAnswers q where q.cardId = ?;', [id])
+
 
 export default {
    all,
@@ -58,5 +77,7 @@ export default {
    QuizFEB,
    QuizBEB,
    QuizDBB,
-   QuizAllb 
+   QuizAllb,
+   quizAnswers
+
 }

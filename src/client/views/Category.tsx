@@ -19,7 +19,7 @@ const Category: React.FC<CategoryProps> = () => {
         <div className="d-flex justify-content-center mt-3">
           <h1
             className="ml-4 mt-2 mb-3 col-sm-4 "
-            style={{ fontSize: "45px", color: "#FFFFFF" }}
+            style={{ fontSize: "40px", color: "#FFFFFF" }}
           >Choose a Category to Study
           </h1>
         </div>

@@ -91,6 +91,12 @@ router.get("/api/QuizALLb", async (req,res) => {
 })
 
 
+router.get("/api/quizAnswers/:id", async (req,res) => {
+  let quiz = await DBcards.quizAnswers(req.params.id)
+  res.json(quiz)
+})
+ 
+ 
 
 //select all users
 router.get("/api/users", async (req, res) => {
