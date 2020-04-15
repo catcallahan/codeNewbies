@@ -16,7 +16,7 @@ class NavBar3 extends React.Component<INavProps, INavState> {
 					<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
 					   
-						<Link className="nav-item nav-link justify-content-end text-white" to = '/study'>studyPage</Link>
+						<Link className="nav-item nav-link justify-content-end text-white" to = '/category'>studyPage</Link>
 						<Link className="nav-item nav-link justify-content-end text-white" to = '/resources'>resourcePage</Link>
 						<Link className="nav-item nav-link justify-content-end text-white" to = '/about'>aboutUs</Link>
 						<Link className="nav-item nav-link justify-content-end text-white" to = '/login'>signIn</Link>
