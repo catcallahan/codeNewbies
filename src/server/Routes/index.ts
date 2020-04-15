@@ -92,11 +92,6 @@ router.get("/api/QuizALLb", async (req,res) => {
 
 
 
-
-
-
-
-
 //select all users
 router.get("/api/users", async (req, res) => {
   let users = await DBusers.all();

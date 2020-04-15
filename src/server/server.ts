@@ -4,7 +4,7 @@ import * as path from 'path';
 import { parse } from 'dotenv/types';
 import cardsRouter from './Routes'
 import usersRouter from './Routes'
-import config from './config '
+import config from './config'
 import routes from './routes'
 import * as passport from 'passport'
 

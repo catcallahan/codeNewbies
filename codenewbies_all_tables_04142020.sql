@@ -15,6 +15,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
 DROP DATABASE IF EXISTS `codenewbies`;
 CREATE SCHEMA `codenewbies` DEFAULT CHARACTER SET latin1 ;
 USE codenewbies;
@@ -82,7 +83,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `userId` int(11) NOT NULL,
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
   `fullName` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `userName` varchar(45) NOT NULL,
@@ -90,7 +91,7 @@ CREATE TABLE `users` (
   `skillLevel` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`userId`),
   UNIQUE KEY `userId_UNIQUE` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -139,6 +140,7 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-13 16:07:13
+-- Dump completed on 2020-04-14 19:57:22
+
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'groupkey'
