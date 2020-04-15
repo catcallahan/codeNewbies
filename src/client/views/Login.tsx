@@ -2,11 +2,49 @@ import * as React from "react";
 import NavBarHome from "./Components/navbarHome";
 
 const Login: React.FC<LoginProps> = () => {
+
     function signInUser() {
-        alert("Welcome "+(document.getElementById("inputUserName") as HTMLInputElement).value)+"!";
+        alert("Welcome " + (document.getElementById("inputSignIn") as HTMLInputElement).value) + "!";
     }
 
+    //adds a line break to the string
+    function addCRLF(inString : string) {
+        if (inString.length > 0) {
+            return inString + "\n";
+        } else {
+            return inString;
+        }
+    }
+
+    //validates all entries for the new user when the new user submit button is clicked
+    function validateNewUser() {
+        let result: string = "";
+        if ((document.getElementById("inputName") as HTMLInputElement).value.length == 0) {
+            result = "Missing Full Name";
+        }
+        if ((document.getElementById("inputEmail") as HTMLInputElement).value.length == 0) {
+            result = addCRLF(result) + "Missing Email";
+        }
+        if ((document.getElementById("inputUserName") as HTMLInputElement).value.length == 0) {
+            result = addCRLF(result) + "Missing User Name";
+        }
+        if ((document.getElementById("inputPassword") as HTMLInputElement).value.length == 0) {
+            result = addCRLF(result) + "Missing Password";
+        }
+        if ((document.getElementById("confirmPassword") as HTMLInputElement).value.length == 0) {
+            result = addCRLF(result) + "Please Confirm Password";
+        }
+        return result;
+    }
+
+    //adds the values for the new user entry to the users table
     function addUser() {
+        let result: string = validateNewUser();
+        if (result.length != 0) {
+            alert(result);
+            return;
+        }
+
         fetch("/api/users", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -17,7 +55,7 @@ const Login: React.FC<LoginProps> = () => {
                 userName: (document.getElementById("inputUserName") as HTMLInputElement).value,
                 password: (document.getElementById("inputPassword") as HTMLInputElement).value,
                 skillLevel: (document.getElementById("inputSkill") as HTMLSelectElement).value
-                        })
+            })
         }).then(function (response) {
             if (response.status >= 400) {
                 throw new Error("failed: addUser = " + response.status);
@@ -26,7 +64,7 @@ const Login: React.FC<LoginProps> = () => {
                 alert("New user added: " + (document.getElementById("inputName") as HTMLInputElement).value);
             }
         }).catch(function (err) {
-            console.log("catch error: " +err);
+            console.log("catch error: " + err);
         });
     }
 
@@ -43,12 +81,12 @@ const Login: React.FC<LoginProps> = () => {
                     <span className="d-flex justify-content-center">
                         <form className="col-sm-4 form-group">
                             <div className="form-group">
-                                <label className="text-darkBlue" htmlFor="inputUserName">userName</label>
-                                <input type="user" className="shadow-lg col-xs-2 form-control" />
+                                <label className="text-darkBlue" htmlFor="inputSignIn">userName</label>
+                                <input id="inputSignIn" type="user" className="shadow-lg col-xs-2 form-control" />
                             </div>
                             <div className="form-group">
-                                <label className="text-darkBlue" htmlFor="inputPassword">password</label>
-                                <input type="password" className="shadow-lg form-control" />
+                                <label className="text-darkBlue" htmlFor="inputSignInPwd">password</label>
+                                <input id="inputSignInPwd" type="password" className="shadow-lg form-control" />
                             </div>
                             <div className="d-flex justify-content-center">
                                 <button type="button" className="shadow-lg btn btn-darkRoseColor" onClick={signInUser}>Submit</button>
@@ -65,7 +103,7 @@ const Login: React.FC<LoginProps> = () => {
                     <span className="d-flex justify-content-center">
                         <form className="col-sm-4 form-group">
                             <div className="form-group">
-                                <label className='text-darkBlue' htmlFor="inputName">fullName</label>
+                                <label className='text-darkBlue' htmlFor="inputName">Full Name</label>
                                 <input id="inputName" type="name" className="shadow-lg form-control" />
                             </div>
                             <div className="form-group">
@@ -73,7 +111,7 @@ const Login: React.FC<LoginProps> = () => {
                                 <input id="inputEmail" type="email" className="shadow-lg form-control" />
                             </div>
                             <div className="form-group">
-                                <label className='text-darkBlue' htmlFor="inputUserName">userName</label>
+                                <label className='text-darkBlue' htmlFor="inputUserName">User Name</label>
                                 <input id="inputUserName" type="user" className="shadow-lg form-control" />
                             </div>
                             <div className="form-group">
@@ -81,7 +119,7 @@ const Login: React.FC<LoginProps> = () => {
                                 <input id="inputPassword" type="password" className="shadow-lg form-control" />
                             </div>
                             <div className="form-group">
-                                <label className='text-darkBlue' htmlFor="inputPassword">confirm Password</label>
+                                <label className='text-darkBlue' htmlFor="confirmPassword">Confirm Password</label>
                                 <input id="confirmPassword" type="password" className="shadow-lg form-control" />
                             </div>
                             <div className="form-group">
