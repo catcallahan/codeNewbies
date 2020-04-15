@@ -119,7 +119,7 @@ router.get("/api/users/:id", async (req, res) => {
 //    "password": "robots1!",
 //    "skillLevel": "Beginner"
 // }
-router.post("/", async (req, res) => {
+router.post("/api/users", async (req, res) => {
   try {
     let users = await DBusers.post(
       Number(req.body.userId),
