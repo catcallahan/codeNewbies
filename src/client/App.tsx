@@ -10,6 +10,7 @@ import User from "./views/userProfile";
 import About from "./views/aboutUs";
 import Category from "./views/Category"
 import { ICard } from "./Utils/types";
+import CategoryQuiz from "./views/CategoryQuiz";
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
@@ -38,10 +39,7 @@ class App extends React.Component<IAppProps, IAppState> {
               <Login />
             </Route>
 
-            <Route exact path="/quiz">
-              {" "}
-              <Quiz />
-            </Route>
+            <Route exact path="/quiz/:categoryquiz?" component={Quiz}></Route>
             <Route exact path="/resources">
               <Resources />
             </Route>
@@ -53,11 +51,8 @@ class App extends React.Component<IAppProps, IAppState> {
              {" "}
               <User />
             </Route>
-            <Route exact path="/category">
-            {" "}
-              <Category />
-            </Route>
-            
+            <Route exact path="/category/" component = {Category}></Route>
+            <Route exact path="/categoryquiz/" component = {CategoryQuiz}></Route>
           </Switch>
         </BrowserRouter>
       );
