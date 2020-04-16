@@ -3,12 +3,26 @@ import NavBarHome from "./Components/navbarHome";
 
 const Login: React.FC<LoginProps> = () => {
 
+    // sign in message
     function signInUser() {
         alert("Welcome " + (document.getElementById("inputSignIn") as HTMLInputElement).value) + "!";
+        clearLoginFields();
     }
 
-    //adds a line break to the string
-    function addCRLF(inString : string) {
+    // clears all login screen fields
+    function clearLoginFields() {
+        (document.getElementById("inputName") as HTMLInputElement).value = "";
+        (document.getElementById("inputEmail") as HTMLInputElement).value = "";
+        (document.getElementById("inputUserName") as HTMLInputElement).value = "";
+        (document.getElementById("inputPassword") as HTMLInputElement).value = "";
+        (document.getElementById("confirmPassword") as HTMLInputElement).value = "";
+        (document.getElementById("inputSkill") as HTMLSelectElement).selectedIndex = 0;
+        (document.getElementById("inputSignIn") as HTMLInputElement).value = "";
+        (document.getElementById("inputSignInPwd") as HTMLInputElement).value = "";
+    }
+
+    // adds a line break to the string
+    function addCRLF(inString: string) {
         if (inString.length > 0) {
             return inString + "\n";
         } else {
@@ -16,7 +30,7 @@ const Login: React.FC<LoginProps> = () => {
         }
     }
 
-    //validates all entries for the new user when the new user submit button is clicked
+    // validates all entries for the new user when the new user submit button is clicked
     function validateNewUser() {
         let result: string = "";
         if ((document.getElementById("inputName") as HTMLInputElement).value.length == 0) {
@@ -37,7 +51,7 @@ const Login: React.FC<LoginProps> = () => {
         return result;
     }
 
-    //adds the values for the new user entry to the users table
+    // adds the values for the new user entry to the users table
     function addUser() {
         let result: string = validateNewUser();
         if (result.length != 0) {
@@ -62,6 +76,7 @@ const Login: React.FC<LoginProps> = () => {
             }
             if (response.status == 200) {
                 alert("New user added: " + (document.getElementById("inputName") as HTMLInputElement).value);
+                clearLoginFields();
             }
         }).catch(function (err) {
             console.log("catch error: " + err);
