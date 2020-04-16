@@ -2,6 +2,13 @@ import * as React from "react";
 import NavBar2 from "./Components/nav2";
 
 const About: React.FC<AboutProps> = () => {
+
+    //feedback submit button
+    function addComment() {
+        alert("Thank you for your feedback!");
+        (document.getElementById("comment") as HTMLTextAreaElement).value = "";
+    }
+
     return (
         <React.Fragment>
             <NavBar2 />
@@ -57,7 +64,7 @@ const About: React.FC<AboutProps> = () => {
                     
                   
 
-                            <div className="col-4 d-flex flex-column">
+                        <div className="col-4 d-flex flex-column">
                             <h1 className="text-white">Where are we headed?</h1>
                             <p className="text-darkBlue text-justify">
                                 We aim to provide an increasingly comprehensive curriculum and environment in which fledgling developers can build their web dev fluency 
@@ -68,13 +75,22 @@ const About: React.FC<AboutProps> = () => {
                                 their personal experiences and wisdom to the next generation of developers.
                         
                             </p>
-                            </div>
-                    
+                        </div>
+                            
+
                     </div>
+
                </div>
-                <div className="container d-flex flex-column">
-               </div>
-        
+               <div className="d-flex justify-content-around">
+               <div className="d-flex flex-column w-75">
+                    <h4 className="text-white">Leave Us A Comment</h4>
+                    <textarea rows={8} id="comment" className="border" ></textarea>
+                    <div className="text-right">
+                        <button type="button" className="shadow-lg btn btn-darkRoseColor btn_sm mt-2 mb-2" onClick={addComment}>Submit</button>
+                    </div>
+                </div>               
+                </div>
+
         </React.Fragment>
     )
 
