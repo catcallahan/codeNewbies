@@ -17,7 +17,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
       <div className="container-fluid ">
         <div className="d-flex justify-content-center mt-3">
           <h1
-            className="ml-4 mt-2 mb-3 col-sm-4 "
+            className="col-md-6 text-center ml-4 mt-2 mb-3 col-sm-4 "
             style={{ fontSize: "50px", color: "#FFFFFF" }}
           > Choose a Quiz Category
           </h1>
