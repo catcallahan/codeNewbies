@@ -1,6 +1,7 @@
 import * as React from "react";
 import NavBar3 from "./Components/nav3";
 import { Link } from "react-router-dom";
+import NavBar2 from "./Components/nav2";
 
 //THIS NAV IS FOR THE CATEGORY PAGE :)
 
@@ -13,7 +14,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
   let allTerms = '{allTerms}'
   return (
     <React.Fragment>
-      <NavBar3 />
+      <NavBar2 />
       <div className="container-fluid ">
         <div className="d-flex justify-content-center mt-3">
           <h1

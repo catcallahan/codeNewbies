@@ -1,6 +1,7 @@
 import * as React from "react";
 import NavBar4 from "./Components/nav4";
 import { Link } from "react-router-dom";
+import NavBar2 from "./Components/nav2";
 
 //THIS NAV IS FOR THE CATEGORY PAGE :)
 
@@ -14,7 +15,7 @@ const Category: React.FC<CategoryProps> = () => {
 
   return (
     <React.Fragment>
-      <NavBar4 />
+      <NavBar2 />
       <div className="container-fluid ">
         <div className="d-flex justify-content-center mt-3">
           <h1
