@@ -7,15 +7,16 @@ import { useEffect, useState } from "react";
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons';
+import { ICard } from '../Utils/types'
 
 let indexCounter = 0;
 const Quiz: React.FC<IQuizProps> = (props) => {
     const { category } = useParams()
-    const [quizCards, setQuizCards] = useState<IQuiz[]>(null);
+    const [quizCards, setQuizCards] = useState<ICard[]>(null);
     const [counter, setCounter] = useState(0);
     useEffect(() => {
         (async () => {
-            let res = await fetch(`/api/${category}`);
+            let res = await fetch(`/api/begginerBE`);
             let quizCards = await res.json();
             setQuizCards(quizCards);
         })();
@@ -57,14 +58,14 @@ const Quiz: React.FC<IQuizProps> = (props) => {
     )
 }
 
-interface IQuiz {
-    cardId: number,
-    categoryLevel: string,
-    cardTitle: string,
-    cardText: string,
-    answerText: string,
-    correctAnswer: number
-}
+// interface IQuiz {
+//     cardId: number,
+//     categoryLevel: string,
+//     cardTitle: string,
+//     cardText: string,
+//     answerText: string,
+//     correctAnswer: number
+// }
 
 interface IQuizProps {
 
