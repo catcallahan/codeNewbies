@@ -23,7 +23,7 @@ class FlashCard extends React.Component<IFlashCardProps, IFlashCardState > {
                         backgroundColor: "#f9e5e4"
                     }}>
                     <h3>Definition:</h3>
-                    <h1 className='cardText' style={{ color: "314455", whiteSpace: "pre" }}>
+                    <h1 className='cardText' style={{ color: "314455", whiteSpace: "pre", fontSize: "23px" }}>
                         {this.props.card.cardText.split("<br />").map((item, key) => {
                             console.log(item)
                             return <React.Fragment key={key}>{item}<br /></React.Fragment>
