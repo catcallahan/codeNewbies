@@ -14,11 +14,11 @@ class QuizCard extends React.Component<IQuizCardProps, IQuizCardState> {
                     paddingBottom: "162px",
                     backgroundColor: "#f9e5e4"
                 }}>
-                <h1 style={{ margin: "0" }}>
-                    <p style={{ color: "9F5A63" }}>{this.props.quizCard.cardText}</p>
-                    {/* This is where the content will go. The line above is a placeholder */}
-                    {/* This needs a way to draw in from the database terms and definitions */}
-                </h1>
+                {this.props.quizCard && (
+                    <h1 style={{ margin: "0", color: "9F5A63" }}>
+                        {this.props.quizCard.cardText}
+                    </h1>
+                )}
             </div>
         )
     }
