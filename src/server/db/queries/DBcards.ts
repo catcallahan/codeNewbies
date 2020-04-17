@@ -54,7 +54,7 @@ const QuizAllb = async () => Query('select c.cardId, c.categoryLevel, c.cardTitl
  const QuizBEB = async () => Query('select c.cardId, c.categoryLevel, c.cardTitle, c.cardText , q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId=c.cardId where c.skillLevel="Beginner" and c.categoryLevel="Back End";;')
 
  //select all questions and answers for skill level = beginner and category = database
- const QuizDBB = async () => Query('select c.cardId, c.cardTitle, c.cardText , q.answerText, q.correctAnswerfrom codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId=c.cardIdwhere c.skillLevel="Beginner" and c.categoryLevel="Database";')
+ const QuizDBB = async () => Query('select c.cardId, c.cardTitle, c.cardText, q.answerText, q.correctAnswer from codenewbies.cards as c left join codenewbies.quizAnswers as q on q.cardId=c.cardId where c.skillLevel="Beginner" and c.categoryLevel="Database";')
 
  //select all card questions by skill level and category level
  // const ??????? = async () => Query('select c.cardId, c.cardTitle, c.cardText from codenewbies.cards as c where c.skillLevel="Beginner" and c.categoryLevel="Front End"')
