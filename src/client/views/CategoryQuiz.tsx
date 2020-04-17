@@ -38,7 +38,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
                   </h5>
                   <Link
                     href="#"
-                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizBEB'>
+                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/begginerBE'>
                     GO
                   </Link>
                 </div>
@@ -52,7 +52,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
                   </h5>
                   <Link
                     href="#"
-                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizFEB'>
+                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/begginerFE'>
                     GO
                   </Link>
                 </div>
@@ -66,7 +66,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
                   </h5>
                   <Link
                     href="#"
-                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizDBB'>
+                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/begginerDB'>
                     GO
                   </Link>
                 </div>
@@ -91,7 +91,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
                   </h5>
                   <Link
                     href="#"
-                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizAllb'>
+                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/cards'>
                     GO
                   </Link>
                 </div>

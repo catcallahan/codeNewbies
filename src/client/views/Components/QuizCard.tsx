@@ -27,10 +27,9 @@ interface IQuizCardProps {
     quizCard: {
         cardId: number,
         categoryLevel: string,
+        skillLevel: string,
         cardTitle: string,
-        cardText: string,
-        answerText: string,
-        correctAnswer: number
+        cardText: string
     }
 };
 
