@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
     const [answers, setAnswers] = useState([]);
 
+    let uniqueKey = uuidv4();
 
     useEffect(() => {
         (async () => {
@@ -28,7 +30,7 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
                         {answers && (
                             answers.map(answer => {
                                 return (
-                                    <div className="input-group-text form-control" >
+                                    <div className="input-group-text form-control" key = {uniqueKey}>
                                         <input type="radio" />
                                         <a>{answer.answerText}</a>
                                     </div>

@@ -16,7 +16,7 @@ const Quiz: React.FC<IQuizProps> = (props) => {
     const [counter, setCounter] = useState(0);
     useEffect(() => {
         (async () => {
-            let res = await fetch(`/api/begginerBE`);
+            let res = await fetch(`/api/${category}`);
             let quizCards = await res.json();
             setQuizCards(quizCards);
         })();
@@ -24,8 +24,14 @@ const Quiz: React.FC<IQuizProps> = (props) => {
 
 
     const onClickHandler = () => {
-        setCounter(counter + 1);
-        console.log(counter);
+        if(counter == (quizCards.length - 1)){
+            setCounter(quizCards.length - 1);
+            alert("Done! Click Review Cards in your User Profile to see your Answers, or select another category.")
+        }
+        if(counter < (quizCards.length - 1)){
+            setCounter(counter + 1);
+            console.log(counter);
+        }
     }
 
     return (
