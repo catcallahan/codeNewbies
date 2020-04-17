@@ -11,7 +11,9 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
             let answers = await res.json();
             setAnswers(answers);
         })();
-    }, []);
+    }, [props.cardId]);
+
+//need to create a unique to assign with the answer options
 
     return (
         <div className="row answer-box border border-white shadow-sm"
@@ -22,22 +24,17 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
                 borderRadius: "2%",
                 backgroundColor: "#8a3d40",
             }}>
-            <div className="col-md-auto">
-                <div className="input-group">
-                    <div className="input-group-prepend">
+            <div className="col-md-auto mb-2">
                         {answers && (
-
                             answers.map(answer => {
                                 return (
-                                    <div className="input-group-text">
+                                    <div className="input-group-text form-control" >
                                         <input type="radio" />
-                                        <p>{answer.answerText}</p>
+                                        <a>{answer.answerText}</a>
                                     </div>
                                 )
                             })
                         )}
-                    </div>
-                </div>
             </div>
         </div>
     )

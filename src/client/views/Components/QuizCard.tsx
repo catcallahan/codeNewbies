@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { ICard } from '../../Utils/types';
-import { IoMdCard } from 'react-icons/io';
+
 
 class QuizCard extends React.Component<IQuizCardProps, IQuizCardState> {
     render() {
@@ -16,7 +15,7 @@ class QuizCard extends React.Component<IQuizCardProps, IQuizCardState> {
                 }}>
                 {this.props.quizCard && (
                     <h1 style={{ margin: "0", color: "9F5A63" }}>
-                        {this.props.quizCard.cardText}
+                        {this.props.quizCard.cardTitle}
                     </h1>
                 )}
             </div>
@@ -26,8 +25,9 @@ class QuizCard extends React.Component<IQuizCardProps, IQuizCardState> {
 
 interface IQuizCardProps {
     quizCard: {
-        skillLevel: string,
+        cardId: number,
         categoryLevel: string,
+        cardTitle: string,
         cardText: string,
         answerText: string,
         correctAnswer: number
