@@ -91,7 +91,7 @@ const CategoryQuiz: React.FC<CategoryProps> = () => {
                   </h5>
                   <Link
                     href="#"
-                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizALLB'>
+                    className="btn btn-block btn-darkBlue text-uppercase" to ='/quiz/QuizALLb'>
                     GO
                   </Link>
                 </div>
