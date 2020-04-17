@@ -20,33 +20,12 @@ class NavBar2 extends React.Component<INavProps, INavState> {
 						{/* <Link className="nav-item nav-link justify-content-end text-white" to = '/study'>studyPage</Link> */}
 						<Link className="nav-item nav-link justify-content-end text-white" to = '/resources'>resourcePage</Link>
 						<Link className="nav-item nav-link justify-content-end text-white" to = '/about'>aboutUs</Link>
-						<Link className="nav-item nav-link justify-content-end text-white" to = '/login'>signIn</Link>
+						<Link className="nav-item nav-link justify-content-end text-white" to = '/userprofile'>myProfile</Link>
 						</div>
 					</div>
 				</nav>
 			</div>
-			// <div>
-			// 	<nav className="navbar navbar-inverse navbar-expand-lg navbar-light bg-darkBlue">
-			// 		<div className="container-fluid">
-			// 			<div className="navbar-header">
-			// 				<button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
-			// 					<span className="icon-bar">-</span>
-			// 					<span className="icon-bar">-</span>
-			// 					<span className="icon-bar">-</span>
-			// 				</button>
-			// 				<a className="navbar-brand" href="/">codeNewbies</a>
-			// 			</div>
-			// 			<div className="collapse navbar-collapse" id="#myNavbar">
-			// 				<ul className="nav navbar-nav">
-			// 					<li><a href="/study">studyPage</a></li>
-			// 					<li><a href="/quiz">quizMe</a></li>
-			// 					<li><a href="/about">aboutUs</a></li>
-			// 					<li><a href="/login">signIn</a></li>
-			// 				</ul>
-			// 			</div>
-			// 		</div>
-			// 	</nav>
-			// </div>
+			
 		)
 	}
 }
