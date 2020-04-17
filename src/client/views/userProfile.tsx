@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 
 const User: React.FC<UserProps> = (props) => {
-    const [user, setUser] = useState<IUser>()
-  
+   
+    const [user, setUser] = useState<IUser[]>(null)
 
     useEffect(() => {
         ( async () => {
@@ -16,21 +16,17 @@ const User: React.FC<UserProps> = (props) => {
             })();
         }, []);
 
-     
-
-console.log(user)
+    
 
     return (
         <React.Fragment>
             <NavBar2 />
-
             <div>
                 <div className="bg-darkBlue rounded text-center container-fluid mt-4">
                       
                         {user && (
 
                     <div className="row d-flex flex-column">
-                        {/* this will be generated from DB */}
                         <h1 className='justify-content-center mt-2' style={{ fontSize: '60px', color: '#FFFFFF' }}>{`{ ${user[0].userName} }`}</h1>
                         <h2 className='justify-content-center' style={{ fontSize: '25px', color: '#97AABD' }}>Difficulty: {user[0].skillLevel}</h2>
                     </div>
@@ -78,12 +74,6 @@ interface IUser {
     userName: string,
     password: string,
     skillLevel: string
-//    "fullName": "Maddie Conaway",
-//    "email": "mc@ib.com",
-//    "userName": "maddie",
-//    "password": "robots1!",
-//    "skillLevel": "Beginner"
-
 
 }
 interface UserProps {

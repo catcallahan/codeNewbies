@@ -22,7 +22,7 @@ return(
             <div className = "d-flex flex-row justify-content-around my-3 pt-2 row">
                 <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/about'>{aboutWord}</Link>
                 <Link className="btn btn-darkBlue shadow-sm" style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/userprofile'>{profileWord}</Link>
-                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/quiz'>{quizWord}</Link>
+                <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/categoryquiz'>{quizWord}</Link>
                 <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF',width: '225px', textShadow: '1px 1px #D86410'}} to = '/resources'>{resourcesWord}</Link>
             </div>
             <div className = 'topbar bg-darkBlue' style ={{height: '11px', width: 'auto'}}></div>

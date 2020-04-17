@@ -10,15 +10,22 @@ import { IconContext } from 'react-icons';
 
 let indexCounter = 0;
 const Quiz: React.FC<IQuizProps> = (props) => {
-    // const { category } = useParams()
-    const [quizCards, setQuizCards] = useState<IQuiz[]>();
+    const { category } = useParams()
+    const [quizCards, setQuizCards] = useState<IQuiz[]>(null);
+    const [counter, setCounter] = useState(0);
     useEffect(() => {
         (async () => {
-            let res = await fetch(`/api/QuizALLb`);
+            let res = await fetch(`/api/${category}`);
             let quizCards = await res.json();
             setQuizCards(quizCards);
         })();
-    }, []);
+    }, [category]);
+
+
+    const onClickHandler = () => {
+        setCounter(counter + 1);
+        console.log(counter);
+    }
 
     return (
         <React.Fragment>
@@ -26,26 +33,25 @@ const Quiz: React.FC<IQuizProps> = (props) => {
             <div style={{ marginTop: "30px", display: "flex", flexDirection: "row", height: "400px" }}>
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-end", padding: "0", alignItems: "center" }}>
-                        <IoIosArrowBack />
+                        {/* <IoIosArrowBack /> */}
                     </div>
                 </IconContext.Provider>
-                {/* <QuizCard /> */}
                 {quizCards && (
-                    <QuizCard quizCard={quizCards[0]} />
+                    <QuizCard quizCard={quizCards[counter]} />
                 )}
                 <IconContext.Provider value={{ size: "4em", color: "white" }}>
                     <div className="col-2" style={{ display: "flex", justifyContent: "flex-start", padding: "0", alignItems: "center" }}>
-                        <IoIosArrowForward />
+                        {/* <IoIosArrowForward /> */}
                     </div>
                 </IconContext.Provider>
             </div>
             <div style={{ marginTop: "30px", display: "flex", justifyContent: "space-around" }}>
                 {quizCards && (
-                    <AnswerBox cardId={quizCards[0].cardId} />
+                    <AnswerBox cardId={quizCards[counter].cardId} />
                 )}
             </div>
-            <div style={{ marginTop: "30px", display: "flex", justifyContent: "center" }}>
-                <button className="btn btn-lg btn-brightRoseColor border border-white">Submit Answer</button>
+            <div className = 'mb-5'style={{ marginTop: "30px", display: "flex", justifyContent: "center" }}>
+                <button className="btn btn-lg btn-brightRoseColor border border-white" onClick = {onClickHandler}>Submit Answer</button>
             </div>
         </React.Fragment>
     )
@@ -53,21 +59,16 @@ const Quiz: React.FC<IQuizProps> = (props) => {
 
 interface IQuiz {
     cardId: number,
-    skillLevel: string,
     categoryLevel: string,
+    cardTitle: string,
     cardText: string,
     answerText: string,
     correctAnswer: number
 }
 
 interface IQuizProps {
-    // quizCards: {
-    //     skillLevel: string,
-    //     categoryLevel: string,
-    //     cardText: string,
-    //     answerText: string,
-    //     correctAnswer: number
-    // }
+
+
 }
 
 export default Quiz 

@@ -85,7 +85,7 @@ router.get("/api/QuizDBB", async (req,res) => {
 })
 
 //begginer quiz with all catergories
-router.get("/api/QuizALLb", async (req,res) => {
+router.get("/api/QuizAllb", async (req,res) => {
   let quiz = await DBcards.QuizAllb()
   res.json(quiz)
 })

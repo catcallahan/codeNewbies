@@ -39,7 +39,7 @@ class App extends React.Component<IAppProps, IAppState> {
               <Login />
             </Route>
 
-            <Route exact path="/quiz/:categoryquiz?" component={Quiz}></Route>
+            <Route exact path="/quiz/:category?" component={Quiz}></Route>
             <Route exact path="/resources">
               <Resources />
             </Route>
@@ -51,8 +51,8 @@ class App extends React.Component<IAppProps, IAppState> {
              {" "}
               <User />
             </Route>
-            <Route exact path="/category/" component = {Category}></Route>
-            <Route exact path="/categoryquiz/" component = {CategoryQuiz}></Route>
+            <Route exact path="/category" component = {Category}></Route>
+            <Route exact path="/categoryquiz" component = {CategoryQuiz}></Route>
           </Switch>
         </BrowserRouter>
       );
