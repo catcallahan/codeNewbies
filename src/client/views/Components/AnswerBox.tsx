@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
     const [answers, setAnswers] = useState([]);
 
-    let uniqueKey = uuidv4();
+    // let uniqueKey = uuidv4();
 
     useEffect(() => {
         (async () => {
@@ -15,7 +15,7 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
         })();
     }, [props.cardId]);
 
-//need to create a unique to assign with the answer options
+    //need to create a unique key to assign with the answer options
 
     return (
         <div className="row answer-box border border-white shadow-sm"
@@ -26,13 +26,13 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
                 borderRadius: "2%",
                 backgroundColor: "#8a3d40",
             }}>
-            <div className="col-md-auto mb-2">
+                <div className="col-md-auto mb-2">
                         {answers && (
                             answers.map(answer => {
                                 return (
-                                    <div className="input-group-text form-control" key = {uniqueKey}>
-                                        <input type="radio" />
-                                        <a>{answer.answerText}</a>
+                                    <div className="input-group-text form-control bg-burgandyColor text-white mb-2">
+                                        <input type="radio" name="answer" />
+                                        <a className="pl-1" >{answer.answerText}</a>
                                     </div>
                                 )
                             })
@@ -47,3 +47,4 @@ interface AnswerBoxProps {
 };
 
 export default AnswerBox;
+

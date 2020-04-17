@@ -24,11 +24,11 @@ const Quiz: React.FC<IQuizProps> = (props) => {
 
 
     const onClickHandler = () => {
-        if(counter == (quizCards.length - 1)){
+        if (counter == (quizCards.length - 1)) {
             setCounter(quizCards.length - 1);
             alert("Done! Click Review Cards in your User Profile to see your Answers, or select another category.")
         }
-        if(counter < (quizCards.length - 1)){
+        if (counter < (quizCards.length - 1)) {
             setCounter(counter + 1);
             console.log(counter);
         }
@@ -52,13 +52,14 @@ const Quiz: React.FC<IQuizProps> = (props) => {
                     </div>
                 </IconContext.Provider>
             </div>
-            <div style={{ marginTop: "30px", display: "flex", justifyContent: "space-around" }}>
+            <h5 className="d-flex justify-content-center mt-2 mb-0 text-white">Please select the definition to the above term and click submit.</h5>
+            <div style={{ marginTop: "10px", display: "flex", justifyContent: "space-around" }}>
                 {quizCards && (
                     <AnswerBox cardId={quizCards[counter].cardId} />
                 )}
             </div>
-            <div className = 'mb-5'style={{ marginTop: "30px", display: "flex", justifyContent: "center" }}>
-                <button className="btn btn-lg btn-brightRoseColor border border-white" onClick = {onClickHandler}>Submit Answer</button>
+            <div className='mb-5' style={{ marginTop: "30px", display: "flex", justifyContent: "center" }}>
+                <button className="btn btn-lg btn-brightRoseColor border border-white" onClick={onClickHandler}>Submit Answer</button>
             </div>
         </React.Fragment>
     )
