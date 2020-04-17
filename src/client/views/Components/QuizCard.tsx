@@ -13,6 +13,7 @@ class QuizCard extends React.Component<IQuizCardProps, IQuizCardState> {
                     paddingBottom: "162px",
                     backgroundColor: "#f9e5e4"
                 }}>
+                <h2 className="text-darkBlue" >Term:</h2>
                 {this.props.quizCard && (
                     <h1 style={{ margin: "0", color: "9F5A63" }}>
                         {this.props.quizCard.cardTitle}
