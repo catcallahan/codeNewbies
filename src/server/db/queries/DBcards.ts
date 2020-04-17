@@ -5,13 +5,13 @@ import { Connection } from '../index'
 export const all = async () => Query('SELECT * FROM cards');
 
 //select begginer cards front end
-export const BFElevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Front End" and skillLevel="Beginner";')
+export const BFElevel = async () => Query( 'SELECT cardId,categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Front End" and skillLevel="Beginner";')
 
 //selct begginer cards back end
-export const BBElevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Back End" and skillLevel="Beginner";')
+export const BBElevel = async () => Query( 'SELECT cardId,categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Back End" and skillLevel="Beginner";')
 
 //select begginer database  cards
-  const BDBlevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Database" and skillLevel="Beginner";')
+  const BDBlevel = async () => Query( 'SELECT cardId,categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Database" and skillLevel="Beginner";')
 
 //select Intermediate front end
   const IFElevel = async () => Query( 'SELECT categoryLevel,skillLevel,cardTitle,cardText FROM Cards WHERE categoryLevel= "Front End" and skillLevel="Intermediate";')
