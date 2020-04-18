@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
     const [answers, setAnswers] = useState([]);
+    const [answerSelection, setAnswerSelection] = useState(null)
 
+    
     // let uniqueKey = uuidv4();
 
     useEffect(() => {
@@ -14,6 +16,12 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
             setAnswers(answers);
         })();
     }, [props.cardId]);
+
+  const changeHandler = (e) => {
+    props.setAnswerSelection(e.target.value);
+    console.log(e.target.value)
+
+  }
 
     //need to create a unique key to assign with the answer options
 
@@ -28,10 +36,10 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
             }}>
                 <div className="col-md-auto mb-2">
                         {answers && (
-                            answers.map(answer => {
+                            answers.map((answer, id) => {
                                 return (
-                                    <div className="input-group-text form-control bg-burgandyColor text-white mb-2">
-                                        <input type="radio" name="answer" />
+                                    <div className="input-group-text form-control bg-burgandyColor text-white mb-2" key={id}>
+                                        <input type="radio" name="answer" value = {answer.correctAnswer} onChange = {(e) => changeHandler(e)}/>
                                         <a className="pl-1" >{answer.answerText}</a>
                                     </div>
                                 )
@@ -43,8 +51,14 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
 }
 
 interface AnswerBoxProps {
-    cardId: number
+    cardId: number,
+    setAnswerSelection: Function
+    
 };
+
+
+
+
 
 export default AnswerBox;
 
