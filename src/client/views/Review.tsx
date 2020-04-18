@@ -80,7 +80,7 @@ const Review: React.FC = () => {
                   }}
                 >
                     {options.answerChoice === "0" ? (
-                  <IconContext.Provider value={{ color: "brightRoseColor", size: "4em"}}>
+                  <IconContext.Provider value={{ color: "#c96567", size: "4em"}}>
                       <div>
                         <FaTimes />
                       </div>
