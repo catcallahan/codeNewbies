@@ -39,7 +39,7 @@ const About: React.FC<AboutProps> = () => {
                 <h2 className="text-darkBlue">
 
                     Our mission is to teach and equip new web developers to confidently enter the work force. 
-                    CodeNewbies focuses on the specific industry vocabulary needed to communicate at a competent level in an interview or professional setting.
+                    whatDivs focuses on the specific industry vocabulary needed to communicate at a competent level in an interview or professional setting.
                
                 </h2>
                </div>
@@ -53,7 +53,7 @@ const About: React.FC<AboutProps> = () => {
                         <div className="col-sm-4 d-flex mr-4 pl-4 flex-column ">
                             <h1 className="text-white">What's the problem?</h1>
                                 <h4 className="text-darkBlue text-left">
-                                    The idea for codeNewbies began after we discovered that many new developers (ourselves included!) find that they do not feel confident 
+                                    The idea for whatDivs began after we discovered that many new developers (ourselves included!) find that they do not feel confident 
                                     articulating what they are being taught and even what they already know. For many, learning to develop is very challenging and requires 
                                     you to digest a myriad of complex processes and programs in a short time. Because web development requires comprehending such a large 
                                     quantity of subjects, things as simple as terminology can be overlooked. This tends to create a fear of what development terminologies might 

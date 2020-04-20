@@ -9,7 +9,7 @@ const Home: React.FC<HomeProps> = () => {
     let quizWord = '{ quizMe }';
     let resourcesWord = '{ moreResources }';
     let clickPhrase = '{ "Choose a Category to Study" }'
-
+    let whatDivs  = '{ ...whatDivs... }'
 
 
 return(
@@ -17,7 +17,7 @@ return(
         <NavBarHome />
         <div className = 'container-fluid'>
             <div className="row">
-                <h1 className = 'pl-3 mt-2 mb-3 col-lg-12 col-md-4 col-sm-2' id= 'mainlogo' style = {{fontSize: '100px', color: '#FFFFFF'}}>codeNewbies</h1>
+                <h1 className = ' mt-5 mb-5 col-lg-12 col-md-4 col-sm-2 justify-content-center d-flex' id= 'mainlogo' style = {{fontSize: '100px', color: '#FFFFFF'}}>{whatDivs}</h1>
             </div>
             <div className = "d-flex flex-row justify-content-around my-3 pt-2 row">
                 <Link className="btn btn-darkBlue shadow-sm"style = {{fontSize : '20px', color: '#FFFFFF', width: '225px', textShadow: '1px 1px #D86410'}} to='/about'>{aboutWord}</Link>
