@@ -17,7 +17,7 @@ const AnswerBox: React.FC<AnswerBoxProps> = (props) => {
         })();
     }, [props.cardId]);
 
-  const changeHandler = (e) => {
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     props.setAnswerSelection(e.target.value);
     console.log(e.target.value)
 
