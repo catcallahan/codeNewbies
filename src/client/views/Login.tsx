@@ -7,6 +7,7 @@ const Login: React.FC<LoginProps> = () => {
     function signInUser() {
         alert("Welcome " + (document.getElementById("inputSignIn") as HTMLInputElement).value) + "!";
         clearLoginFields();
+        window.location.href = "/userprofile";
     }
 
     // clears all login screen fields
